@@ -3,6 +3,7 @@ package com.kita.first.level3;
 import java.util.Arrays;
 
 public class MyListTest {
+	/*
 	public static void main(String[] args) {
 		MyList list = new MyList();
 		list.add(10);
@@ -85,4 +86,5 @@ class MyList {	// 메모: class가 붕어빵틀, 메인메소드 든 클래스 바깥에 따로 정의
 		arr=temp;
 		System.out.println(Arrays.toString(arr));
 	}
+	*/
 }
