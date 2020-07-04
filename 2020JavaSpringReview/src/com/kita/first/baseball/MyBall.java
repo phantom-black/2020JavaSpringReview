@@ -15,7 +15,7 @@ public class MyBall {
 		scan = new Scanner(System.in);
 	}
 	
-	public void SetNumbers() {
+	public void setNumbers() {
 		for(int i=0; i<myArr.length; i++) {
 			System.out.printf("숫자%d: ", i+1);
 			String val = scan.nextLine();
@@ -23,8 +23,27 @@ public class MyBall {
 			try {
 				myArr[i] = Integer.parseInt(val);
 			} catch(Exception e) {
+				i--;
 				System.out.println("숫자만 입력하세요");
+				continue;
+			}
+			
+			if(myArr[i]<1 || myArr[i]>9) {
+				System.out.println("1~9값만 입력하세요");
+				continue;
+			}
+			
+			for(int z=0; z<i; z++) {
+				if(myArr[i]==myArr[z]) {
+					i--;
+					System.out.println("중복된 값이 존재합니다.");
+					break;
+				}
 			}
 		}
+	}
+	
+	public int get(int idx) {
+		return myArr[idx];
 	}
 }

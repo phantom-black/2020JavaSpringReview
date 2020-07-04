@@ -17,12 +17,15 @@ public class Baseball {
 		for(int i=0; i<rArr.length; i++) {
 			rArr[i] = (int)Math.random() * 9 + 1;
 			for(int z=0; z<i; z++) {
-				if(rArr[z]==rArr[i]) {
-					rArr[i] = 0;
+				if(rArr[i]==rArr[z]) {
 					i--;
 					break;
 				}
 			}
 		}
+	}
+	
+	public int get(int idx) {
+		return rArr[idx];
 	}
 }
