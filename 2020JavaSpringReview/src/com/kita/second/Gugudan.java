@@ -12,13 +12,13 @@ public class Gugudan {
 		result = Utils.parseStringToInt("aa10");//0리턴
 		result = Utils.parseStringToInt("9");//9리턴
 		System.out.println(result);
-		/*
+		
 		int[] arr = {4, 5, 11, 223, 3, 10};
 		Utils.sortASC(arr);//오름차순정렬
 		Utils.printArr(arr);//[3,4,5,10,11,223]
 		Utils.sortDESC(arr);//내림순정렬
 		Utils.printArr(arr);//[223,11,10,5,4,3]
-		
+		/*
 		int[] rArr = Utils.createRandomArr(1, 12, 7);//1~9 랜덤한 값을 5칸 가지는 정수형 배열을 리턴
 		Utils.printArr(rArr);
 		
@@ -30,7 +30,8 @@ public class Gugudan {
 		
 		String star = makeStarTriangle(5); //결과값 문자열로 넘기기
 		System.out.println(star);
-		 */
+		*/
+		
 	}
 	
 	public static void gugudan(int n1, int n2) {
