@@ -49,4 +49,32 @@ public class Utils {
 		}
 		System.out.println();
 	}
+	
+	public static int[] createRandomArr(int sVal, int eVal, int len) {
+		int[] arr = new int[len];
+		
+		for(int i=0; i<len; i++) {
+			arr[i] = (int)(Math.random() * (eVal - sVal + 1) + sVal);
+		}
+		return arr;
+	}
+	
+	public static int[] createRandomArrNoDuplication(int sVal, int eVal, int len) {
+		if(eVal-sVal+1<len) {
+			return null;
+		}
+		
+		int[] arr = new int[len];
+		for(int i=0; i<len; i++) {
+			arr[i] = (int)(Math.random() * (eVal - sVal + 1) + sVal);
+			for(int z=0; z<i; z++) {
+				if(arr[i]==arr[z]) {
+					i--;
+					break;
+				}
+			}
+		}
+		return arr;
+	}
+
 }

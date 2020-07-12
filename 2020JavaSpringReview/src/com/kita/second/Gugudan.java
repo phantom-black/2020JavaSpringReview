@@ -18,19 +18,18 @@ public class Gugudan {
 		Utils.printArr(arr);//[3,4,5,10,11,223]
 		Utils.sortDESC(arr);//내림순정렬
 		Utils.printArr(arr);//[223,11,10,5,4,3]
-		/*
-		int[] rArr = Utils.createRandomArr(1, 12, 7);//1~9 랜덤한 값을 5칸 가지는 정수형 배열을 리턴
+		
+		int[] rArr = Utils.createRandomArr(1, 9, 5);//1~9 랜덤한 값을 5칸 가지는 정수형 배열을 리턴
 		Utils.printArr(rArr);
 		
 		//랜덤한 숫자가 나올수 있는 범위보다 큰칸을 요구하는 경우 null을 리턴
-		rArr =  Utils.createRandomArr(5, 15, 13);
+		rArr =  Utils.createRandomArrNoDuplication(5, 15, 13);
 		Utils.printArr(rArr);//null이 넘어오면 "arr is null을 출력"
-		rArr =  Utils.createRandomArr(5, 15, 11);
+		rArr =  Utils.createRandomArrNoDuplication(5, 15, 11);
 		Utils.printArr(rArr);
 		
 		String star = makeStarTriangle(5); //결과값 문자열로 넘기기
 		System.out.println(star);
-		*/
 		
 	}
 	
@@ -49,5 +48,16 @@ public class Gugudan {
 			temp += arr[i];
 		}
 		return temp;
+	}
+	
+	public static String makeStarTriangle(int n) {
+		String star="";
+		for(int i=1; i<=n; i++) {
+			for(int z=0; z<i; z++) {
+				star += "*";
+			}
+			star += "\n";
+		}
+		return star;
 	}
 }
